@@ -1,8 +1,9 @@
 # Module for creating S3 logging bucket for ELBs
 This module can be used as a standalone module for what ever purpouse or can be
-linked with `tf-aws-asg-elb` module. Output of this module can be used as a
-param for the latter one allowing for using single S3 bucket as a ELB logs store
-facility.
+linked with
+[tf-aws-asg-elb](https://git.bashton.net/Bashton-Terraform-Modules/tf-aws-asg-elb)
+module. Output of this module can be used as a param for the latter one allowing
+for using single S3 bucket as a ELB logs store facility.
 
 Bucket name convention: `${var.name}-${var.envname}`
 ## Usage
