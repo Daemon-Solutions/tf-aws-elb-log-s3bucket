@@ -1,17 +1,33 @@
 // Global Configuration
-variable "name" {}
+variable "name" {
+  description = "The desired name prefix for your bucket, and the value for the 'Name' tag"
+  type = "string"
+}
 
-variable "envname" {}
+variable "envname" {
+  description = "The desired name suffix for you bucket, and the value for the 'Environment' tag"
+  type = "string"
+}
 
-variable "service" {}
+variable "service" {
+  description = "This will be the value for the 'Service' tag"
+  type = "string"
+}
 
-variable "owner" {}
+variable "owner" {
+  description = "This will be the value for the 'owner' tag"
+  type = "string"
+}
 
 variable "region" {
+  description = "The AWS region in which to create your resources"
+  type = "string"
   default = "eu-west-1"
 }
 
 variable "elb_aws_account" {
+  description = "The list of account ARNs for the Elastic Load Balancing service"
+  type = "map"
   default = {
     us-east-1      = "127311923021"
     us-west-2      = "797873946194"
